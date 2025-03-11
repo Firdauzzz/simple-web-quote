@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-pink-50">
+        <!-- <h1 class="text-2xl font-bold mb-4 text-center">Beyond <span class="text-green-500">Inspiration</span></h1> -->
+        <div id="quote-card" class="bg-white p-6 rounded-md shadow-lg max-w-md w-full mx-auto flex flex-col items-center justify-center min-h-[250px]">
+            <div id="quote-content" class="flex flex-col items-center text-center mb-4">
+                <div id="image-container" class="w-32 h-32 rounded-full overflow-hidden">
+                    <img id="quote-image" src="assets/img/Henry_ford_1919.jpg" alt="Profile Picture"
+                        class="object-cover w-full h-full">
+                </div>
+                
+                <div id="text-container" class="mt-4 flex flex-col items-center space-y-2">
+                    <div id="quote-author" class="text-2xl font-bold text-neutral">Henry Ford</div>
+                    <p id="quote-text" class="text-medium font-regular  text-neutral">Satu-satunya kesalahan
+                        nyata adalah
+                        kesalahan yang darinya kita tidak belajar apa pun.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="flex justify-center mt-4 space-x-4">
+            <div class="flex space-x-2">
+                <button id="back-btn" class="btn btn-outline btn-accent text-white">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button id="next-btn" class="btn btn-outline btn-accent text-white">
+                    <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="flex space-x-2">
+                <button id="btn1" class="btn btn-accent text-white">Add Quote</button>
+                <button id="btn2" class="btn btn-error text-white">Delete Quote</button>
+            </div>
+        </div>
+        <!-- Add Quote Modal -->
+        <div id="add-quote-modal"
+            class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+                <h2 class="text-2xl font-bold mb-4 text-neutral">Add New Quote</h2>
+                <form id="add-quote-form">
+                    <div class="mb-4">
+                        <label for="quote-text-input" class="block text-gray-700">Quote</label>
+                        <textarea id="quote-text-input" class="w-full px-3 py-2 border rounded-lg bg-white text-neutral"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="quote-author-input" class="block text-gray-700">Author</label>
+                        <input type="text" id="quote-author-input"
+                            class="w-full px-3 py-2 border rounded-lg  bg-white text-neutral">
+                    </div>
+                    <div class="mb-4">
+                        <label for="quote-image-input" class="block text-gray-700">Image URL</label>
+                        <input type="text" id="quote-image-input"
+                            class="w-full px-3 py-2 border rounded-lg  bg-white text-neutral">
+                    </div>
+                    <div class="flex justify-end space-x-2">
+                        <button type="button" id="cancel-btn" class="btn btn-outline btn-error">Cancel</button>
+                        <button type="submit" class="btn btn-accent text-white">Add Quote</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
